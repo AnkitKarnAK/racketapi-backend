@@ -61,7 +61,7 @@ const findUserByAuth = async (req, res) => {
     } else {
       return res.status(401).json({
         success: false,
-        message: "email does not exsist",
+        message: "email does not exists",
       });
     }
   } catch (err) {
