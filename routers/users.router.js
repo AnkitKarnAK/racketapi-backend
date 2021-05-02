@@ -11,7 +11,15 @@ const {
 
 router.route("/").get(getUsers).post(addUser);
 
-router.route("/login").post(findUserByAuth);
+router
+  .route("/login")
+  .get((req, res) => {
+    res.json({
+      success: true,
+      message: "validate login by post request of email and password",
+    });
+  })
+  .post(findUserByAuth);
 
 router.param("userId", findUserById);
 
