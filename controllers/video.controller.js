@@ -31,7 +31,7 @@ const addVideo = async (req, res) => {
 
 const findVideoById = async (req, res, next, videoId) => {
   try {
-    const video = await Video.findById(videoId);
+    const video = await Video.findOne({ videoId: videoId });
     if (!video) {
       return res
         .status(400)
