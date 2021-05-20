@@ -8,6 +8,8 @@ const users = require("./routers/users.router");
 const carts = require("./routers/carts.router");
 const wishlists = require("./routers/wishlists.router");
 const videos = require("./routers/videos.router");
+const likedVideos = require("./routers/likedVideos.router");
+const watchLaters = require("./routers/watchLaters.router");
 
 const connectToDatabase = require("./database/dbConnect");
 const { routeNotFound } = require("./middlewares/route-not-found.middleware");
@@ -25,6 +27,8 @@ app.use("/users", users);
 app.use("/carts", carts);
 app.use("/wishlists", wishlists);
 app.use("/videos", videos);
+app.use("/likedvideos", likedVideos);
+app.use("/watchlaters", watchLaters);
 
 app.get("/", (req, res) => {
   res.send("welcome to RacketAPI");
