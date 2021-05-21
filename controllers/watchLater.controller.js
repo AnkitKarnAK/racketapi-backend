@@ -27,7 +27,7 @@ const findUserWatchLaterById = async (req, res, next, userId) => {
   } catch (err) {
     res.status(500).json({
       success: false,
-      message: "Unable to retrive watchLater details",
+      message: "Unable to retrieve watchLater details",
       errorMessage: err.message,
     });
   }
