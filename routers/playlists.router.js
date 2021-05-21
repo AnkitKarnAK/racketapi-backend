@@ -14,15 +14,12 @@ router.route("/").get(getPlaylists);
 
 router.param("userId", findUserPlaylists);
 
-router
-  .route("/:userId")
-  .get(getUserPlaylists)
-  .post(createUserPlaylist)
-  .delete(removeUserPlaylist);
+router.route("/:userId").get(getUserPlaylists).post(createUserPlaylist);
 
 router
   .route("/:userId/:playlistId")
   .get(getUserPlaylistVideos)
-  .post(updateUserPlaylistVideo);
+  .post(updateUserPlaylistVideo)
+  .delete(removeUserPlaylist);
 
 module.exports = router;

@@ -100,7 +100,7 @@ const createUserPlaylist = async (req, res) => {
 const removeUserPlaylist = async (req, res) => {
   try {
     let { playlist } = req;
-    const { _id: playlistId } = req.body;
+    const { playlistId } = req.params;
 
     for (let list of playlist.playlists) {
       if (list._id == playlistId) {
