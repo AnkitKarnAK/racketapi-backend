@@ -64,6 +64,13 @@ const getActivePlaylistItems = async (playlist) => {
 const getUserPlaylists = async (req, res) => {
   try {
     let { playlist } = req;
+    await playlist
+      .populate({
+        path: "playlists.videos.videoId",
+        select:
+          "title videoId url viewCount date likes dislikes channelName channelSubscribers duration html image",
+      })
+      .execPopulate();
     const playlistItems = await getActivePlaylistItems(playlist);
     res.json({ success: true, playlists: playlistItems });
   } catch (err) {
