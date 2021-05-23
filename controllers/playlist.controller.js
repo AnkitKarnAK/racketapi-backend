@@ -93,6 +93,15 @@ const createUserPlaylist = async (req, res) => {
     };
     playlist.playlists = concat(playlist.playlists, newList);
     let updatedPlaylist = await playlist.save();
+
+    await playlist
+      .populate({
+        path: "playlists.videos.videoId",
+        select:
+          "title videoId url viewCount date likes dislikes channelName channelSubscribers duration html image",
+      })
+      .execPopulate();
+
     updatedPlaylist = await getActivePlaylistItems(updatedPlaylist);
     res.status(201).json({ success: true, playlists: updatedPlaylist });
   } catch (err) {
@@ -118,6 +127,15 @@ const removeUserPlaylist = async (req, res) => {
     }
 
     let updatedPlaylist = await playlist.save();
+
+    await playlist
+      .populate({
+        path: "playlists.videos.videoId",
+        select:
+          "title videoId url viewCount date likes dislikes channelName channelSubscribers duration html image",
+      })
+      .execPopulate();
+
     updatedPlaylist = await getActivePlaylistItems(updatedPlaylist);
     res.json({ success: true, playlists: updatedPlaylist });
   } catch (err) {
