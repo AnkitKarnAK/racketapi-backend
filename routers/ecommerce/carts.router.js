@@ -5,7 +5,7 @@ const {
   findUserCartById,
   getUserCartById,
   updateCartById,
-} = require("../controllers/cart.controller");
+} = require("../../controllers/ecommerce/cart.controller");
 
 router.route("/").get(getCarts);
 

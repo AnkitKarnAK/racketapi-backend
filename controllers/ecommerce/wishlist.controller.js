@@ -1,5 +1,5 @@
-const User = require("../models/user.model");
-const Wishlist = require("../models/wishlist.model");
+const User = require("../../models/user.model");
+const Wishlist = require("../../models/ecommerce/wishlist.model");
 
 const getWishlists = async (req, res) => {
   const wishlists = await Wishlist.find({});

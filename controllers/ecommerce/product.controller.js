@@ -1,4 +1,4 @@
-const Product = require("../models/product.model");
+const Product = require("../../models/ecommerce/product.model");
 const { extend } = require("lodash");
 
 const getProducts = async (req, res) => {
