@@ -3,14 +3,14 @@ const mongoose = require("mongoose");
 const cors = require("cors");
 require("dotenv").config();
 
-const products = require("./routers/products.router");
+const products = require("./routers/ecommerce/products.router");
 const users = require("./routers/users.router");
-const carts = require("./routers/carts.router");
-const wishlists = require("./routers/wishlists.router");
-const videos = require("./routers/videos.router");
-const likedVideos = require("./routers/likedVideos.router");
-const watchLaters = require("./routers/watchLaters.router");
-const playlists = require("./routers/playlists.router");
+const carts = require("./routers/ecommerce/carts.router");
+const wishlists = require("./routers/ecommerce/wishlists.router");
+const videos = require("./routers/video-library/videos.router");
+const likedVideos = require("./routers/video-library/likedVideos.router");
+const watchLaters = require("./routers/video-library/watchLaters.router");
+const playlists = require("./routers/video-library/playlists.router");
 
 const connectToDatabase = require("./database/dbConnect");
 const { routeNotFound } = require("./middlewares/route-not-found.middleware");

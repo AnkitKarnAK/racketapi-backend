@@ -1,5 +1,5 @@
-const User = require("../models/user.model");
-const Playlist = require("../models/playlist.model");
+const User = require("../../models/user.model");
+const Playlist = require("../../models/video-library/playlist.model");
 const { concat } = require("lodash");
 
 const getPlaylists = async (req, res) => {

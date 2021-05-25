@@ -1,5 +1,5 @@
-const User = require("../models/user.model");
-const LikedVideo = require("../models/likedVideo.model");
+const User = require("../../models/user.model");
+const LikedVideo = require("../../models/video-library/likedVideo.model");
 
 const getLikedVideos = async (req, res) => {
   const likedVideos = await LikedVideo.find({});

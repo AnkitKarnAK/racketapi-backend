@@ -8,7 +8,7 @@ const {
   removeUserPlaylist,
   getUserPlaylistVideos,
   updateUserPlaylistVideo,
-} = require("../controllers/playlist.controller");
+} = require("../../controllers/video-library/playlist.controller");
 
 router.route("/").get(getPlaylists);
 

@@ -1,5 +1,5 @@
 const { extend } = require("lodash");
-const Video = require("../models/video.model");
+const Video = require("../../models/video-library/video.model");
 
 const getVideos = async (req, res) => {
   try {

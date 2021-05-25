@@ -5,7 +5,7 @@ const {
   findUserWatchLaterById,
   getUserWatchLaterById,
   updateWatchLaterById,
-} = require("../controllers/watchLater.controller");
+} = require("../../controllers/video-library/watchLater.controller");
 
 router.route("/").get(getWatchLaters);
 

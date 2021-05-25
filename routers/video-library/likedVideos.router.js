@@ -5,7 +5,7 @@ const {
   findUserLikedVideoById,
   getUserLikedVideoById,
   updateLikedVideoById,
-} = require("../controllers/likedVideo.controller");
+} = require("../../controllers/video-library/likedVideo.controller");
 
 router.route("/").get(getLikedVideos);
 

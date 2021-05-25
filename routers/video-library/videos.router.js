@@ -6,7 +6,7 @@ const {
   findVideoById,
   getVideoById,
   updateVideoById,
-} = require("../controllers/video.controller");
+} = require("../../controllers/video-library/video.controller");
 
 router.route("/").get(getVideos).post(addVideo);
 
