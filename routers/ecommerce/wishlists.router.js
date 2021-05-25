@@ -5,7 +5,7 @@ const {
   findUserWishlistById,
   getUserWishlistById,
   updateWishlistById,
-} = require("../controllers/wishlist.controller");
+} = require("../../controllers/ecommerce/wishlist.controller");
 
 router.route("/").get(getWishlists);
 

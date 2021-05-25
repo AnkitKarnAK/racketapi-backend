@@ -1,5 +1,5 @@
-const Cart = require("../models/cart.model");
-const User = require("../models/user.model");
+const Cart = require("../../models/ecommerce/cart.model");
+const User = require("../../models/user.model");
 
 const { extend } = require("lodash");
 

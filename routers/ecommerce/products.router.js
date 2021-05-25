@@ -6,7 +6,7 @@ const {
   findProductById,
   getProductById,
   updateProductById,
-} = require("../controllers/product.controller");
+} = require("../../controllers/ecommerce/product.controller");
 
 router.route("/").get(getProducts).post(addProduct);
 
