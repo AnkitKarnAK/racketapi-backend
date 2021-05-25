@@ -1,5 +1,5 @@
-const User = require("../models/user.model");
-const WatchLater = require("../models/watchLater.model");
+const User = require("../../models/user.model");
+const WatchLater = require("../../models/video-library/watchLater.model");
 
 const getWatchLaters = async (req, res) => {
   const watchLaters = await WatchLater.find({});
